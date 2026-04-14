@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(135deg, #eef2f7, #f9fbff);
+  color: #222;
+
+  /* NEW */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* TOP BAR (glass effect) */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.group-title {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* hamburger */
+.hamburger {
+  font-size: 26px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.hamburger:hover {
+  transform: scale(1.1);
+}
+
+/* MENU */
+.menu {
+  position: absolute;
+  right: 18px;
+  top: 60px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  overflow: hidden;
+
+  display: none;
+  flex-direction: column;
+
+  animation: fadeDown 0.25s ease;
+}
+
+.menu a {
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #222;
+  transition: 0.2s;
+  
+}
+
+.menu a:hover {
+  background: #f2f6ff;
+}
+
+/* PAGE */
+.page-content {
+  flex: 1; /* THIS pushes footer down */
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+  animation: fadeIn 0.6s ease;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+}
+
+
+
+hr {
+  width: 80px;
+  border: 2px solid #4f7cff;
+  margin: 10px auto 30px;
+  border-radius: 10px;
+}
+
+/* IMAGE */
+.image-box {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+}
+
+.image-box img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 16px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.image-box img:hover {
+  transform: scale(1.02);
+}
+
+/* CARD */
+.card {
+  width: 600px;
+  background: white;
+  padding: 18px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.team-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* COLLAPSIBLE */
+.collapsible {
+  width: 600px;
+  max-width: 90%;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+
+.collapsible button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  background: white;
+  cursor: pointer;
+  font-weight: 600;
+  text-align: left;
+  font-size: 30px;
+}
+
+.collapsible button:hover {
+  background: #f6f9ff;
+}
+
+.content {
+  display: none;
+  padding: 12px 16px;
+  border-top: 1px solid #eee;
+
+  animation: fadeIn 0.3s ease;
+}
+
+.content a {
+  display: block;
+  padding: 6px 0;
+  color: #4f7cff;
+  text-decoration: none;
+}
+
+.doc-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  h1 { font-size: 24px; }
+}
