@@ -10,15 +10,3 @@ function toggleMenu() {
     menu.style.opacity = "1";
   }
 }
-
-function toggleCollapse(id) {
-  const el = document.getElementById(id);
-
-  if (el.style.display === "block") {
-    el.style.opacity = "0";
-    setTimeout(() => el.style.display = "none", 150);
-  } else {
-    el.style.display = "block";
-    el.style.opacity = "1";
-  }
-}
